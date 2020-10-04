@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent" android:layout_height="match_parent"
-              android:orientation="vertical" android:background="#131212" tools:context=".DetallesArticulos">
+              android:orientation="vertical" android:background="#2BA8B8" tools:context=".DetallesArticulos">
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:orientation="horizontal" android:layout_marginTop="25dp" android:layout_marginLeft="15dp">
         <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                   android:src="@drawable/ic_buscar" android:tint="#FFFFFF"/>
+                   android:src="@drawable/ic_buscar" />
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:text="Resultado Encontrado" android:textSize="25sp" android:textStyle="bold"
                   android:layout_marginBottom="30dp" android:layout_marginLeft="15dp"
@@ -19,7 +19,7 @@
                       android:orientation="vertical">
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:text="Codigo: " android:layout_marginLeft="15dp"
-                      android:layout_marginRight="15dp" android:textStyle="bold"
+                      android:layout_marginRight="15dp" android:textStyle="italic"
                       android:textSize="18dp" android:textColor="#fff"/>
 
             <TextView android:id="@+id/tv_codigo" android:layout_width="match_parent"
@@ -29,7 +29,7 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:text="Descripcion: " android:layout_marginLeft="15dp"
-                      android:layout_marginRight="15dp" android:textStyle="bold"
+                      android:layout_marginRight="15dp" android:textStyle="italic"
                       android:textSize="18dp" android:textColor="#fff"/>
 
             <TextView android:id="@+id/tv_descripcion" android:layout_width="match_parent"
@@ -39,7 +39,7 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:text="Precio: " android:layout_marginLeft="15dp"
-                      android:layout_marginRight="15dp" android:textStyle="bold"
+                      android:layout_marginRight="15dp" android:textStyle="italic"
                       android:textSize="18dp" android:textColor="#fff"/>
 
             <TextView android:id="@+id/tv_precio" android:layout_width="match_parent"
@@ -106,7 +106,7 @@
 
                             <Button android:id="@+id/btnGoToReports" style="@style/Widget.AppCompat.Button.Borderless.Colored"
                                     android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-                                    android:text="Ver reportes" />
+                                    android:text="Ver reportes"/>
 
                             <Button style="@style/Widget.AppCompat.Button.Borderless.Colored" android:layout_width="0dp"
                                     android:layout_weight="1" android:layout_height="wrap_content"

@@ -9,27 +9,33 @@
               android:layout_height="wrap_content" android:text="DATOS DEL ARTICULO"
               android:textAlignment="center" android:layout_marginTop="20dp"
               android:textSize="26dp" android:textColor="#000"
-              android:textStyle="bold" android:fontFamily="serif-monospace"/>
+              android:textStyle="italic" android:fontFamily="serif-monospace"/>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
         <LinearLayout
                 android:layout_width="match_parent" android:layout_height="match_parent"
                 android:orientation="vertical">
-                <ImageView android:layout_width="match_parent" android:layout_height="176dp"
-                           android:src="@mipmap/ic_venta" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/nota" />
 
                 <EditText android:id="@+id/content_codigo" android:layout_width="match_parent"
+                          android:layout_marginTop="30dp"
                           android:layout_height="wrap_content" android:hint="Ingrese el codigo"
                           android:inputType="number"
                           android:paddingLeft="25dp"
-                          android:drawableStart="@drawable/ic_num" android:drawablePadding="5dp"
+                          android:textStyle="italic"
                           android:layout_marginRight="15dp" android:layout_marginLeft="15dp" />
 
                 <EditText android:id="@+id/content_descripcion" android:layout_width="match_parent"
                           android:layout_height="wrap_content" android:hint="Ingrese la descripcion del articulo"
                           android:layout_marginRight="12dp" android:layout_marginLeft="12dp"
                           android:layout_marginTop="20dp"
-                          android:paddingLeft="25dp" android:drawableStart="@drawable/ic_des"
+                          android:paddingLeft="25dp"
+                          android:textStyle="italic"
                           android:drawablePadding="5dp"/>
 
                 <EditText android:id="@+id/content_precio" android:layout_width="match_parent"
@@ -37,15 +43,21 @@
                           android:layout_marginRight="12dp" android:layout_marginLeft="12dp"
                           android:layout_marginTop="20dp" android:inputType="numberDecimal"
                           android:paddingLeft="25dp"
-                          android:drawableStart="@drawable/ic_precio" android:drawablePadding="5dp"/>
+                          android:textStyle="italic"/>
 
-                <Button android:id="@+id/btn_guardar" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp" android:layout_marginTop="30dp"
-                        android:text="Guardar" android:textColor="#fff"
-                        android:onClick="alta" android:background="#2e4053"
-                        android:drawableRight="@drawable/ic_guardar"
-                        android:paddingRight="100dp" android:drawablePadding="-140dp"/>
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="100dp"
+                android:background="#2BA8B8"
+                android:onClick="alta"
+                android:paddingRight="1dp"
+                android:text="Guardar"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

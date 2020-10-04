@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             new android.app.AlertDialog.Builder(this)
                     .setIcon(R.drawable.ic_salir)
-                    .setTitle("Warning")
-                    .setMessage("¿Realmente desea salir?")
+                    .setTitle("Salir")
+                    .setMessage("La App se cerrará por completo")
                     .setNegativeButton(android.R.string.cancel, null)
                     .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_atras));
         toolbar.setTitleTextColor(getResources().getColor(R.color.letra));
         toolbar.setTitleMargin(0, 0, 0, 0);
-        toolbar.setSubtitle("CRUD SQLite-2020");
+        toolbar.setSubtitle("SIS22-B");
         toolbar.setSubtitleTextColor(getResources().getColor(R.color.letra));
-        toolbar.setTitle("Jc_Aries");
+        toolbar.setTitle("Jesús Henríquez");
         setSupportActionBar(toolbar);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -232,10 +232,10 @@ public class MainActivity extends AppCompatActivity {
                 datos.setDescripcion(et_descripcion.getText().toString());
                 datos.setPrecio(Double.parseDouble(et_precio.getText().toString()));
                 if (conexion.insertardatos(datos) == true) {
-                    Toast.makeText(this, "Registro agregado satisfactoriamente!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Guradado <3", Toast.LENGTH_SHORT).show();
                     limpiarDatos();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Error. Ya existe un registro\n" +
+                    Toast.makeText(getApplicationContext(), "Error. Registro existente :(\n" +
                             " Codigo: " + et_codigo.getText().toString(), Toast.LENGTH_LONG).show();
                     limpiarDatos();
                 }
@@ -271,11 +271,11 @@ public class MainActivity extends AppCompatActivity {
                 et_descripcion.setText(datos.getDescripcion());
                 et_precio.setText("" + datos.getPrecio());
             } else {
-                Toast.makeText(this, "No existe un articulo con dicho codigo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Registro inexistente ", Toast.LENGTH_SHORT).show();
                 limpiarDatos();
             }
         } else {
-            Toast.makeText(this, "Ingrese el codigo del articulo a buscar.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Ingrese el código", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -337,7 +337,7 @@ public class MainActivity extends AppCompatActivity {
             datos.setDescripcion(descripcion);
             datos.setPrecio(precio);
             if (conexion.modificar(datos) == true) {
-                Toast.makeText(this, "Registro Modificado Correctamente.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Modificación exitosa", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "No se han encontrado resultados para la busqueda especificada.", Toast.LENGTH_SHORT).show();
             }
