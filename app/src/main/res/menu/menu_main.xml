@@ -20,6 +20,6 @@
             app:showAsAction="always" />
     <item
             android:id="@+id/recycler"
-            android:title="Listado Recycler"
+            android:title="Registros"
             app:showAsAction="never" />
 </menu>
